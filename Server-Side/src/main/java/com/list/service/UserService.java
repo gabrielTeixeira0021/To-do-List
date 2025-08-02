@@ -5,8 +5,8 @@ import com.list.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-import java.util.List;
 
+@Service
 public class UserService implements UserServiceInt {
     private final UserRepository userRepository;
 
