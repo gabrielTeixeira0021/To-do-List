@@ -20,6 +20,11 @@ public class Task {
     private String title;
     private String description;
     private boolean favorite;
+/*
+    @ManyToOne
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
+    private User user;
+*/
 
     public Task(String title, String description, boolean favorite) {
         this.title = title;

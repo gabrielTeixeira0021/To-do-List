@@ -5,10 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.List;
 import java.util.Objects;
 
 @Entity
+@Table(name = "app_users")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -20,9 +20,11 @@ public class User {
     private String username;
     private String email;
 
-    @OneToMany(mappedBy = "user")
-    private List<Task> tasks;
-
+    /*
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
+    private List<Task> tasks = new ArrayList<>();
+*/
     public User (String username, String email) {
         this.username = username;
         this.email = email;

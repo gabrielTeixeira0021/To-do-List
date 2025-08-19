@@ -1,7 +1,6 @@
 package com.list.service;
 
 import com.list.domain.Task;
-import com.list.domain.User;
 import com.list.repository.TaskRepository;
 import org.springframework.stereotype.Service;
 
@@ -66,6 +65,8 @@ public class TaskService implements TaskServiceInt{
 
     @Override
     public List<Task> getFavoriteTasks() {
-        return taskRepository.findFavoriteTasks();
+        return taskRepository.findByFavoriteTrue();
     }
+
+
 }
